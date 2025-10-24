@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #000000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    background: rgba(30, 30, 30, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 50px 40px;
+    box-shadow: 0 8px 32px 0 rgba(252, 180, 109, 0.3);
+    border: 1px solid rgba(252, 180, 109, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 50px;
+    background: transparent;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.logo-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+/* Boutons */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid transparent;
+    padding: 20px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(252, 180, 109, 0.2);
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(252, 180, 109, 0.5);
+    background: #FCB46D;
+    color: white;
+    border-color: #FCB46D;
+}
+
+.btn:active {
+    transform: translateY(-2px);
+}
+
+.btn .icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.btn .text {
+    text-align: center;
+}
+
+/* WhatsApp container */
+.whatsapp-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(252, 180, 109, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-whatsapp {
+    box-shadow: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 16px;
+    gap: 10px;
+}
+
+.btn-whatsapp .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-whatsapp:first-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0 0;
+}
+
+.btn-whatsapp:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.btn-whatsapp:hover {
+    box-shadow: none;
+}
+
+.btn .text {
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+    
+    .logo-container {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .logo-container img {
+        max-width: 250px;
+    }
+    
+    .btn {
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+    
+    .btn .icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .btn-whatsapp {
+        padding: 14px 18px;
+        font-size: 15px;
+    }
+    
+    .btn-whatsapp .icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .btn {
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+    
+    .btn .text {
+        font-size: 15px;
+    }
+}
+
+/* Animation au chargement */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-container {
+    animation: fadeInUp 0.6s ease;
+}
+
+.btn {
+    animation: fadeInUp 0.6s ease;
+}
+
+.btn:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.btn:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.btn:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.btn:nth-child(4) {
+    animation-delay: 0.4s;
+}
